@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topiclass - Student Register</title>
+  <link rel="stylesheet" href="studentRegistration.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="logo">
+      <div class="logo__icon"><a href="index.html"></a>T</div>
+      <div class="logo__text"><a href="index.html"></a>topiclass</div>
+    </div>
+    <div class="nav__right">
+      <a class="pill" href="register.html">Register</a>
+      <a class="pill pill--primary" href="login.html">Login</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="card">
+      <div class="card__top">
+        <div class="card__title">Student Registration</div>
+        <div class="card__sub">Create a student account</div>
+      </div>
+
+      <div class="card__body">
+        <form>
+          <div class="row">
+            <div class="field">
+              <label class="label">Full Name</label>
+              <input class="input" type="text" placeholder="Name" required />
+            </div>
+            <div class="field">
+              <label class="label">Phone</label>
+              <input class="input" type="tel" placeholder="+880..." required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <input class="input" type="email" placeholder="Hi@mail.com" required />
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label class="label">Password</label>
+              <input class="input" type="password" placeholder="********" required />
+            </div>
+            <div class="field">
+              <label class="label">Confirm Password</label>
+              <input class="input" type="password" placeholder="********" required />
+            </div>
+          </div>
+
+          
+
+          <button class="btn btn--green" type="submit">SIGN UP (STUDENT)</button>
+
+          <div class="note">
+            Are you a teacher? <a href="teacherRegistration.html">Register as Teacher</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
