@@ -1,0 +1,220 @@
+/* =========================
+   RESET + BASE
+========================= */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#04315f,#073b73,#052b54);
+  color:#fff;
+}
+a{text-decoration:none;color:inherit}
+
+/* =========================
+   NAVBAR (Professional)
+========================= */
+:root{
+  --brand:#0b5aa8;
+  --green:#17c964;
+}
+
+.navbar{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:86px;
+  z-index:9999;
+
+  background: rgba(6, 42, 78, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  height:86px;
+  padding:0 28px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+/* Brand */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand-icon{
+  width:48px;height:48px;
+  background:rgba(255,255,255,0.95);
+  color:var(--brand);
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:22px;
+}
+.brand-text{
+  font-weight:900;
+  font-size:24px;
+  text-transform: lowercase;
+}
+
+/* Center menu */
+.nav-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
+.nav-link{
+  color: rgba(255,255,255,0.9);
+  font-weight:800;
+  font-size:15px;
+  position:relative;
+  padding:10px 2px;
+  transition:.25s;
+}
+.nav-link:hover{color:#fff;}
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:4px;
+  width:0%;
+  height:3px;
+  background: var(--green);
+  border-radius:999px;
+  transition: width .25s ease;
+}
+.nav-link:hover::after{width:100%;}
+.nav-link.active::after{width:100%;}
+
+/* Right Actions */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:14px;
+  transition:.25s;
+}
+.btn-ghost{
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.06);
+}
+.btn-ghost:hover{
+  background: rgba(255,255,255,0.10);
+}
+.btn-solid{
+  background:#fff;
+  color:var(--brand);
+}
+.btn-solid:hover{
+  transform: translateY(-1px);
+}
+
+/* Burger (mobile) */
+.burger{
+  display:none;
+  width:44px;height:44px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  border-radius:14px;
+  cursor:pointer;
+}
+.burger span{
+  display:block;
+  width:20px;height:2px;
+  background:#fff;
+  margin:5px auto;
+  border-radius:999px;
+}
+
+/* Mobile Menu */
+@media (max-width: 900px){
+  .nav-actions{display:none;}
+  .burger{display:inline-block;}
+
+  .nav-menu{
+    position:fixed;
+    top:86px;left:0;
+    width:100%;
+    background: rgba(6, 42, 78, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+
+    padding:16px 22px;
+    transform: translateY(-12px);
+    opacity:0;
+    pointer-events:none;
+    transition:.25s ease;
+  }
+  .nav-menu.open{
+    transform: translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .nav-link{width:100%;padding:12px 6px;}
+}
+
+/* =========================
+   HERO (Full screen)
+========================= */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 110px 20px 30px; /* top padding for navbar */
+}
+.hero-content{max-width:850px}
+.hero h1{
+  font-size:56px;
+  line-height:1.2;
+  font-weight:900;
+}
+.hero h1 span{color:var(--green)}
+.hero p{
+  margin-top:18px;
+  font-size:18px;
+  opacity:.88;
+}
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn-primary{
+  padding:15px 34px;
+  background: var(--green);
+  border-radius:40px;
+  font-weight:900;
+}
+.btn-outline{
+  padding:15px 34px;
+  border:2px solid rgba(255,255,255,0.8);
+  border-radius:40px;
+  font-weight:900;
+}
+
+/* Responsive hero */
+@media (max-width:768px){
+  .hero h1{font-size:36px;}
+}

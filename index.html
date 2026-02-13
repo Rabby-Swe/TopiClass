@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topiclass</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+
+<header class="navbar">
+  <div class="logo">
+    <div class="logo-box">T</div>
+    <span>topiclass</span>
+    
+   
+</div>
+
+  <div class="nav-links">
+   
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+
+    <h1>
+      Learn From <span>Verified Teachers</span><br>
+      Anytime, Anywhere
+    </h1>
+
+    <p>
+      Topiclass connects students with expert tutors for
+      topic-based learning and personalized guidance.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="register.html" class="btn-primary">Get Started</a>
+      <a href="register.html" class="btn-outline">Become a Teacher</a>
+    </div>
+
+  </div>
+</section>
+<header class="navbar">
+  <div class="nav-inner">
+
+    <a class="brand" href="index.html">
+      <div class="brand-icon">T</div>
+      <div class="brand-text">topiclass</div>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="#">Services</a>
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Contact Us</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="register.html">Register</a>
+      <a class="btn btn-solid" href="login.html">Login</a>
+    </div>
+
+    <button class="burger" id="burgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+
+<script>
+  
+  const burgerBtn = document.getElementById("burgerBtn");
+  const navMenu = document.getElementById("navMenu");
+  burgerBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    burgerBtn.classList.toggle("open");
+  });
+</script>
+
+
+
+
+
+</body>
+</html>
